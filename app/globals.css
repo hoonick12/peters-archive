@@ -1,0 +1,18 @@
+/* 모바일 메뉴 배경 투명도 조절 */
+@media (max-width: 768px) {
+  /* 모바일 메뉴 오버레이 배경 */
+  [data-nextra-menu] {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+  }
+
+  /* 다크모드 지원 */
+  .dark [data-nextra-menu] {
+    background-color: rgba(17, 17, 17, 0.95) !important;
+  }
+
+  /* 메뉴 뒷배경 블러 효과 */
+  [data-nextra-menu] {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
