@@ -56,6 +56,18 @@ PARA는 정보를 4가지 카테고리로 분류하는 방법론입니다:
 - **basePath**: `/peters-archive` (GitHub Pages 서브디렉토리)
 - **output**: `export` (정적 사이트 생성)
 - **ES Modules**: `.mjs` 확장자 사용 (CommonJS 아님!)
+- **검색**: Pagefind 사용 (static export용)
+
+### 검색 기능 제약사항
+⚠️ **중요**: 개발 모드(`npm run dev`)에서는 검색이 작동하지 않습니다.
+
+- **이유**: Pagefind는 빌드된 HTML 파일을 인덱싱하므로 MDX 파일에서는 검색 불가
+- **개발 중 검색 테스트 방법**:
+  1. `npm run build` 실행 (검색 인덱스 자동 생성)
+  2. `npx serve out -p 3001` 실행
+  3. http://localhost:3001/peters-archive 에서 확인
+- **프로덕션**: GitHub Pages에서는 정상 작동
+- **검색 인덱스 위치**: `out/_pagefind/` (빌드 후 생성)
 
 ---
 
