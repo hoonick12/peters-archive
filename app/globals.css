@@ -1,34 +1,58 @@
 /* 모바일 메뉴 배경 불투명 처리 */
 @media (max-width: 768px) {
   /* 모바일 사이드바 배경 완전 불투명 */
+  aside,
   aside.nextra-sidebar-container,
   [data-nextra-menu],
-  .nextra-sidebar-container {
+  .nextra-sidebar-container,
+  nav[class*="nextra"] {
     background-color: rgb(255, 255, 255) !important;
   }
 
   /* 다크모드 지원 */
+  .dark aside,
   .dark aside.nextra-sidebar-container,
   .dark [data-nextra-menu],
-  .dark .nextra-sidebar-container {
+  .dark .nextra-sidebar-container,
+  .dark nav[class*="nextra"] {
     background-color: rgb(17, 17, 17) !important;
   }
 
+  /* 모든 aside 요소에 완전 불투명 배경 강제 */
+  aside {
+    background: rgb(255, 255, 255) !important;
+  }
+
+  .dark aside {
+    background: rgb(17, 17, 17) !important;
+  }
+
   /* 메뉴 컨테이너 z-index 확보 */
+  aside,
   aside.nextra-sidebar-container,
   [data-nextra-menu] {
     z-index: 100 !important;
   }
 
-  /* 오버레이 배경 추가 */
-  .nextra-sidebar-container::before {
+  /* 오버레이 배경 - 본문 가리기 */
+  body::after {
     content: '';
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 50;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  /* 메뉴가 열렸을 때 오버레이 표시 */
+  body:has(aside[data-open="true"])::after,
+  body:has(.nextra-hamburger[aria-expanded="true"])::after {
+    opacity: 1;
+    pointer-events: auto;
   }
 }
