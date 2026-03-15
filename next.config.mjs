@@ -1,6 +1,8 @@
 import nextra from 'nextra'
 
-const withNextra = nextra({})
+const withNextra = nextra({
+  search: true,
+})
 
 export default withNextra({
   basePath: '/peters-archive',
