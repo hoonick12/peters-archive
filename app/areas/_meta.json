@@ -1,0 +1,15 @@
+{
+  "page": {
+    "title": "개요",
+    "display": "hidden"
+  },
+  "development": {
+    "title": "💻 개발"
+  },
+  "investment": {
+    "title": "💰 투자"
+  },
+  "learning": {
+    "title": "📚 학습"
+  }
+}
