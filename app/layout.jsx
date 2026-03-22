@@ -26,6 +26,8 @@ export default async function RootLayout({ children }) {
             </Footer>
           }
           docsRepositoryBase="https://github.com/hoonick12/peters-archive/blob/main"
+          editLink={null}
+          feedback={{ content: null }}
         >
           {children}
         </Layout>

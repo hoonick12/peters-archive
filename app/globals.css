@@ -56,3 +56,8 @@
     pointer-events: auto;
   }
 }
+
+/* Copy page 버튼 및 우측 상단 플로팅 버튼 영역 숨기기 */
+.nextra-breadcrumb + div {
+  display: none !important;
+}
