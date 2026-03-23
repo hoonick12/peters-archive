@@ -1,0 +1,22 @@
+import { NetLiquidityDashboard } from '../../../../components/NetLiquidityDashboard'
+
+# US Net Liquidity
+
+**순유동성 = Fed 총자산 − TGA − RRP**
+
+달러 유동성의 실질적인 크기를 측정하는 핵심 지표.
+연준이 돈을 찍어도 TGA나 RRP에 쌓이면 시장에는 없는 돈이다.
+
+<NetLiquidityDashboard />
+
+---
+
+## 지표 설명
+
+| 시리즈 | 의미 | 유동성 영향 |
+|--------|------|-------------|
+| WALCL | Fed 총자산 (QE/QT) | 증가 → 유동성 ↑ |
+| WTREGEN | 재무부 일반계정 (TGA) | 증가 → 유동성 ↓ |
+| RRPONTSYD | 역레포 (RRP) | 증가 → 유동성 ↓ |
+
+순유동성이 **4주간 $200B 이상** 변화하면 유의미한 시그널로 본다.
