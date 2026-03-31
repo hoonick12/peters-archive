@@ -1,4 +1,5 @@
 export default {
+  '2026-04-01': '2026.04.01 - Stablecoin Market Data',
   '2026-03-31': '2026.03.31 - Stablecoin Market Data',
   '2026-03-30': '2026.03.30 - CRCL 내부자 보유량',
   '2026-03-29': '2026.03.29 - Stablecoin Market Data',
