@@ -1,4 +1,5 @@
 export default {
+  '2026-04-20': '2026.04.20 - Stablecoin Market Data',
   '2026-04-19': '2026.04.19 - Stablecoin Market Data',
   '2026-04-18': '2026.04.18 - Stablecoin Market Data',
   '2026-04-17': '2026.04.17 - Stablecoin Market Data',
